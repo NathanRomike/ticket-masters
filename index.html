@@ -21,15 +21,15 @@
             <div class="form-group">
               <label for="new-first-showing-property">Current Showing</label>
               <select name="new-first-showing-property" id="new-first-showing-property">
-                <option value="true">Premier</option>
-                <option value="false">Second Run</option>
+                <option value="false">Premier</option>
+                <option value="true">Second Run</option>
               </select>
             </div>
             <div id="ticket-amounts">
               <div class="ticket-amount">
                 <div class="form-group">
                   <label for="ticket-amount">Tickets Available</label>
-                  <input type="number" class="form-control ticket-amount">
+                  <input type="text" class="form-control" id="ticket-amount">
                 </div>
               </div>
             </div>
@@ -40,29 +40,7 @@
           </ul>
         </div>
         <div class="col-md-4">
-          <div id="show-ticket-form">
-            <form id="new-ticket">
-              <div class="form-group">
-                <label for="age">Age category</label>
-                <select name="age" id="age">
-                  <option value="Senior">Senior</option>
-                  <option value="Adult">Adult</option>
-                  <option value="Child">Child</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="matinee">Showing time</label>
-                <select name="matinee" id="matinee">
-                  <option value="true">Matinee</option>
-                  <option value="false">Evening</option>
-                </select>
-              </div>
-              <button type="submit" class="btn">Reserve ticket</button>
-            </form>
-            <ul id="tickets">
 
-            </ul>
-          </div>
         </div>
       </div>
     </div>

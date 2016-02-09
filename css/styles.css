@@ -1,11 +1,11 @@
-#show-ticket-form{
+/*#show-ticket-form{
   display: none;
-}
-#add-ticket {
+}*/
+.link {
   cursor: pointer;
   color: #0088cc;
 }
 
-#add-ticket:hover {
+.link:hover {
   text-decoration: underline;
 }
