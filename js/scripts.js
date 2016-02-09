@@ -1,8 +1,11 @@
+var idGlobal = 0;
 function Movie(movieName, firstShowing, ticketAmount) {
   this.movieName = movieName;
   this.firstShowing = firstShowing;
   this.ticketAmount = ticketAmount;
   this.tickets = [];
+  idGlobal += 1;
+  this.idLocal = idGlobal;
 }
 
 Movie.prototype.reserveTicket = function() {
@@ -50,10 +53,10 @@ $(document).ready(function() {
     $("#movies").append('<li class="new-movie">' +
       '<h3>' + newMovie.movieName + '</h3>' +
       '<p>' + showingProperty + '</p>' +
-      '<p id="tickets-left'+newMovie.movieName+'">' + newMovie.ticketAmount + '</p>' +
-      '<p class="link" id="add-ticket'+newMovie.movieName+'">' + 'buy ticket' + '</p>' + '</li>');
+      '<p id="tickets-left'+newMovie.idLocal+'">' + newMovie.ticketAmount + '</p>' +
+      '<p class="link" id="add-ticket'+newMovie.idLocal+'">' + 'buy ticket' + '</p>' + '</li>');
 
-    $("#movies").find("#add-ticket"+newMovie.movieName).click(function() {
+    $("#movies").find("#add-ticket"+newMovie.idLocal).click(function() {
       $("#show-ticket-form").remove();
       $(".col-md-4").append('<div id="show-ticket-form">' +
         '<form id="new-ticket">'+
@@ -89,7 +92,7 @@ $(document).ready(function() {
         if (!newMovie.reserveTicket()) {
           $("#tickets").append('<li class="price">' + '<p>' + 'Sorry, this show is sold out' + '</p>' + '</li>');
         } else {
-          $("#movies").find("#tickets-left"+newMovie.movieName).text(newMovie.ticketAmount);
+          $("#movies").find("#tickets-left"+newMovie.idLocal).text(newMovie.ticketAmount);
         }
       });
     });

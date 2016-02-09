@@ -4,6 +4,7 @@ describe('Movie', function() {
     expect(newMovie.movieName).to.equal('rear window');
     expect(newMovie.firstShowing).to.equal(false);
     expect(newMovie.ticketAmount).to.equal(20);
+    expect(newMovie.idlocal).to.equal(1);
     expect(newMovie.tickets).to.eql([]);
   });
 });
