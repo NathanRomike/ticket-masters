@@ -1,0 +1,11 @@
+#show-ticket-form{
+  display: none;
+}
+#add-ticket {
+  cursor: pointer;
+  color: #0088cc;
+}
+
+#add-ticket:hover {
+  text-decoration: underline;
+}

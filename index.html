@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Ticket Masters!</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1> movies </h1>
+      <div class="row">
+        <div class="col-md-8">
+          <h2>Add movie:</h2>
+          <form id="new-movie">
+            <div class="form-group">
+              <label for="new-movie-name">Movie name</label>
+              <input type="text" class="form-control" id="new-movie-name">
+            </div>
+            <div class="form-group">
+              <label for="new-first-showing-property">Current Showing</label>
+              <select name="new-first-showing-property" id="new-first-showing-property">
+                <option value="true">Premier</option>
+                <option value="false">Second Run</option>
+              </select>
+            </div>
+            <div id="ticket-amounts">
+              <div class="ticket-amount">
+                <div class="form-group">
+                  <label for="ticket-amount">Tickets Available</label>
+                  <input type="number" class="form-control ticket-amount">
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn">Add</button>
+          </form>
+          <ul id="movies">
+
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <div id="show-ticket-form">
+            <form id="new-ticket">
+              <div class="form-group">
+                <label for="age">Age category</label>
+                <select name="age" id="age">
+                  <option value="Senior">Senior</option>
+                  <option value="Adult">Adult</option>
+                  <option value="Child">Child</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="matinee">Showing time</label>
+                <select name="matinee" id="matinee">
+                  <option value="true">Matinee</option>
+                  <option value="false">Evening</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn">Reserve ticket</button>
+            </form>
+            <ul id="tickets">
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
