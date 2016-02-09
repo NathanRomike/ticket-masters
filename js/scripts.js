@@ -5,6 +5,10 @@ function Movie(movieName, firstShowing, ticketAmount) {
   this.tickets = [];
 }
 
+Movie.prototype.reserveTicket = function() {
+  this.ticketAmount -= 1;
+}
+
 function Ticket(movie, age, matinee) {
   this.movie = movie;
   this.age = age;

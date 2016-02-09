@@ -14,4 +14,11 @@ describe('Ticket', function () {
     var newTicket = new Ticket(newMovie, 'Senior', false);
     expect(newTicket.getPrice()).to.equal(15);
   });
+
+  it('subtracts one ticket from total tickets when created', function() {
+    var newMovie = new Movie('rear window', true, 20);
+    var newTicket = new Ticket(newMovie, 'Senior', false);
+    newMovie.reserveTicket();
+    expect(newMovie.ticketAmount).to.equal(19);
+  });
 });
